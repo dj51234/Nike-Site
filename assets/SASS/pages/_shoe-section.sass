@@ -1,0 +1,247 @@
+// SHOE DISPLAY //
+
+#shoe-section
+	width: 100%
+	background: url(../img/hero2.png) top -200px right -50px no-repeat
+	background-color: #27292B
+	background-size: cover
+
+	.shoe-wrap
+		padding: 200px 10px 80px
+		overflow: hidden
+
+	.display-wrap
+		margin: 0 auto
+		max-width: 800px
+
+	.shoe-display
+		max-width: 900px
+		margin-left: -140px
+		padding-left: 20px
+
+		.superfly
+			position: absolute
+			top: 0
+			left: 15px
+
+			p
+				&:first-child
+					color: #AAA
+					font-size: 12px
+					font-weight: 300
+
+				&:last-child
+					color: #FFF
+					font-size: 20px
+
+		.shoe-nav
+			max-width: 140px
+
+			.shoe-select
+				width: 120px
+				height: 80px
+
+			.shoe-select-border
+				padding: 10px
+				margin: 20px 0
+				border: 1px solid transparent
+				cursor: pointer
+				transition: 50ms ease-in-out
+
+				&.active
+					border: 1px solid $green
+
+				&:first-child .shoe-select
+					background-image: url(../img/shoe-left.png)
+					background-repeat: no-repeat
+					background-size: contain
+
+				&:nth-child(2) .shoe-select
+					background-image: url(../img/shoe-right.png)
+					background-repeat: no-repeat
+					background-size: contain
+
+				&:nth-child(3) .shoe-select
+					background-image: url(../img/shoe-bottom.png)
+					background-repeat: no-repeat
+					background-size: contain
+					width: 120px
+					height: 45px
+
+				&:nth-child(3)
+					padding: 30px 10px
+					margin-top: 7px
+
+		.shoe-type
+			position: relative
+			width: 620px
+			height: 620px
+			border-radius: 50%
+			background: linear-gradient(rgba(164,211,90,1),rgba(178,218,104,1))
+			transition: 300ms ease-in-out
+
+			img
+				display: inline-block
+				transition: opacity .5s ease-in-out
+				opacity: 0
+
+
+				&.active-main
+					opacity: 1
+
+				&:first-child
+					position: absolute
+					top: -10px
+					left: -80px
+
+				&:nth-child(2)
+					position: absolute
+					top: 0
+					left: -50px
+
+				&:nth-child(3)
+					position: absolute
+					top: 150px
+					left: -80px
+
+	// MOBILE SHOE SECTION //
+
+	.mobile-shoe-nav
+		text-align: center
+		display: none
+
+		span
+			width: 20px
+			height: 20px
+			border: 1px solid $green
+			margin: 0 20px
+			display: inline-block
+			border-radius: 50%
+			cursor: pointer
+
+			&.active
+				background-color: $green
+
+	// SHOE INFO SECTION //
+
+	.unit-lockup
+		max-width: 1080px
+		margin: 0 auto
+		padding: 50px 10px
+
+		.info-unit
+			max-width: 350px
+			font-weight: 300
+			position: relative
+			padding: 0 15px
+
+			p
+				color: $paragraph
+				line-height: 27px
+				font-size: 14px
+				padding-top: 30px
+
+			h3
+				font-weight: 300
+				text-transform: uppercase
+				color: #FFF
+				font-size: 26px
+				line-height: 27px
+				max-width: 208px
+
+		.bars
+			width: 100px
+			height: 3px
+			position: absolute
+			top: -33px
+			left: 15px
+
+			span
+				background-color: #EEE
+				padding: 1.5px 20px
+				display: inline-block
+				font-size: 0
+
+				&:first-child
+					margin-right: 1px
+
+//// MEDIA QUERIES ////
+
+@media (max-width: 1080px)
+	#shoe-section
+		position: relative
+		.shoe-nav
+			display: none
+
+		.mobile-shoe-nav
+			display: block
+
+		.shoe-wrap
+			padding-top: 100px
+
+			.shoe-display
+				// overflow: hidden
+				margin: 0 auto
+				padding-top: 50px
+				position: static
+
+				.superfly
+					position: absolute
+					top: 25px
+					left: 50%
+					margin-left: -60px
+
+				.shoe-type
+					margin: 50px auto 0
+					width: 250px
+					height: 250px
+
+					img
+						height: auto
+						width: 320px
+
+						&:nth-child(1)
+							top: 0
+							left: -25px
+
+						&:nth-child(2)
+							top: 20px
+							left: -25px
+
+						&:nth-child(3)
+							top: 70px
+							left: -30px
+
+@media (max-width: 750px)
+	#shoe-section
+		.flex-middle
+			flex-direction: column
+
+			.info-unit
+				margin: 50px 0
+				max-width: 60%
+
+@media (max-width: 450px)
+	#shoe-section
+		.shoe-wrap
+			.display-wrap
+				.shoe-display
+
+					.shoe-type
+						width: 200px
+						height: 200px
+
+						img
+							width: 250px
+
+							&:nth-child(1)
+								top: 0
+								left: -25px
+
+							&:nth-child(2)
+								top: 20px
+								left: -25px
+
+							&:nth-child(3)
+								top: 70px
+								left: -30px

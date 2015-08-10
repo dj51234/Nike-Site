@@ -1,0 +1,56 @@
+// INFO SECTION //
+
+#info-section
+	background-color: #121212
+
+	.unit-lockup
+		max-width: 1080px
+		margin: 0 auto
+		padding: 170px 10px
+
+		.info-unit
+			max-width: 350px
+			font-weight: 300
+			position: relative
+			padding: 0 15px
+
+			p
+				color: $paragraph
+				line-height: 27px
+				font-size: 14px
+				padding-top: 30px
+
+			h3
+				font-weight: 300
+				text-transform: uppercase
+				color: #FFF
+				font-size: 26px
+				line-height: 27px
+				max-width: 208px
+
+	.bars
+		width: 100px
+		height: 3px
+		position: absolute
+		top: -100px
+		left: 15px
+
+		span
+			background-color: #242424
+			padding: 1.5px 20px
+			display: inline-block
+			font-size: 0
+
+			&:first-child
+				margin-right: 1px
+
+//// MEDIA QUERIES ////
+
+@media (max-width: 750px)
+	#info-section
+		.flex-middle
+			flex-direction: column
+
+			.info-unit
+				margin: 50px 0
+				max-width: 60%
